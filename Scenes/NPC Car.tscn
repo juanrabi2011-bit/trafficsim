@@ -19,6 +19,12 @@ region_rect = Rect2(112.5, 378.25, 87.75, 54)
 position = Vector2(-3, -3)
 shape = SubResource("RectangleShape2D_go66d")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Road Checking Timer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Car Stuck Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Road Checking Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Car Stuck Timer" to="." method="_on_car_stuck_timer_timeout"]
