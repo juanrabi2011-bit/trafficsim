@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b225avfq2othn"]
+
+[ext_resource type="Texture2D" uid="uid://d37rpdwbunfo1" path="res://Assets/Only For Car.png" id="1_wqo35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go66d"]
+size = Vector2(49, 27)
+
+[node name="Car" type="CharacterBody2D"]
+top_level = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wqo35")
+region_enabled = true
+region_rect = Rect2(112.5, 378.25, 87.75, 54)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -2.5)
+shape = SubResource("RectangleShape2D_go66d")
