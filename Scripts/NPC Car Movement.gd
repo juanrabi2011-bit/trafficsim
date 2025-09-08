@@ -91,7 +91,7 @@ func _check_for_roads():
 	return null # Added to prevent errors when no road is found
 
 # Occurs in every game frame
-func _physics_process(delta):
+func _physics_process(_delta):
 	# If the character hits a wall, get a new direction
 	if is_on_wall():
 		direction = random_direction()
